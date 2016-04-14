@@ -6,7 +6,7 @@ list.files()
 read.csv('inflammation-01.csv' , header = FALSE)
 
 weight_kg <- 55
-weight_kg
+weight_kg}
 #convert weights to pounds
 weight_kg*2.2
 weight_kg <- 57.5
@@ -80,4 +80,36 @@ plot(min_day_inflammation)
 
 sd_day_inflammation <- apply(dat, 2, sd)
 plot(sd_day_inflammation)
- 
+
+str(read.csv)
+temp <-67
+#fahrenheit to Kelvin:
+fahr_to_kelvin <- function(temp) {
+  kelvin <- ((temp - 32) * (5/9)) + 273.15
+  return(kelvin)
+}
+    
+    fahr_to_kelvin(67)
+    
+fahr_to_kelvin <- function (temp) {
+  kelvin <- ((temp - 32) * (5/9)) +273.15
+  return(kelvin)
+}
+
+fahr_to_kelvin(67)
+fahr_to_kelvin(temp)
+
+kelvin_to_celsius <- function (temp) {
+  celsius <- temp - 273.15
+  return(celsius)
+}
+kelvin_to_celsius(0)
+
+fahr_to_celsius <- function(temp) {
+  temp_k <- fahr_to_kelvin(temp)
+  result <- kelvin_to_celsius(temp_k)
+  return(result)
+}
+
+fahr_to_celsius(32.0)
+
