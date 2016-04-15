@@ -113,3 +113,155 @@ fahr_to_celsius <- function(temp) {
 
 fahr_to_celsius(32.0)
 
+analyze <- function(filename) {
+  # Plots the average, min, and max inflammation over time.
+  # Input is character string of a csv file.
+  dat <- read.csv(file = filename, header = FALSE)
+  avg_day_inflammation <- apply(dat, 2, mean)
+  plot(avg_day_inflammation)
+  max_day_inflammation <- apply(dat, 2, max)
+  plot(max_day_inflammation)
+  min_day_inflammation <- apply(dat, 2, min)
+  plot(min_day_inflammation)
+}
+
+analyze("inflammation-01.csv")
+analyze("inflammation-02.csv")
+
+best_practice <- c("Let", "the" , "computer")
+
+len <- 0
+vowels <- c("a","e", "i", "o", "u")
+
+for(v in vowels){
+  print(len)
+  len <- len+1
+}
+len
+v
+letter <- "z"
+
+for(letter in c("a", "b","c")){t(letter)
+}eq(3)
+
+seq(3)
+seq(1,2,3)
+seq(3)
+
+print_N <- function(natural_number){
+  #function prints natural numbers
+  #input is a number
+  container_of_numbers <- seq(natural_number)
+  for(x in container_of_numbers){
+    print(x)
+  }
+  
+}
+
+print_N(3)
+print_N(10)
+
+2^4
+
+expo <- function(base, exponent){
+  tot <- 1
+  
+  #accounts for exponent=0. Don't worry about this for now
+  for(i in 1:exponent){
+    tot <- tot * base
+  }
+  
+  return(tot)
+}
+
+expo(2,2)
+
+#loop through files analysis
+list.files()
+Sys.glob("*.csv")
+Sys.glob("i.csv")
+  
+
+analyze <- function(filename) {
+  # Plots the average, min, and max inflammation over time.
+  # Input is character string of a csv file.
+  dat <- read.csv(file = filename, header = FALSE)
+  avg_day_inflammation <- apply(dat, 2, mean)
+  plot(avg_day_inflammation)
+  max_day_inflammation <- apply(dat, 2, max)
+  plot(max_day_inflammation)
+  min_day_inflammation <- apply(dat, 2, min)
+  plot(min_day_inflammation)
+}
+
+analyze_all <- function(pattern) {
+  # Runs the function analyze for each file in the current working directory
+  # that contains the given pattern.
+  filenames <- list.files(path = "data", pattern = pattern, full.names = TRUE)
+  for (f in filenames) {
+    analyze(f)
+  }
+}
+
+analyze("data/inflammation-01.csv")
+list.files()
+setwd("~/Desktop/software-carpentry-2016/data-files/r-lesson/")
+
+pdf("inflammation-01.pdf")
+analyze("data/inlammation-01.csv")
+
+setwd("~/Desktop/software-carpentry-2016/data-files/r-lesson/")
+pdf("inflammation-01.pdf")
+analyze("data/inflammation-01.csv")
+dev.off()
+
+num <- 102
+if (num >100){
+  print("greater")
+}else{
+  print("not greater")
+}
+print("done")
+
+num > 100
+
+num  < 100
+
+num <- 102
+if (num > 100) {
+  print("num is greater than 100")
+}
+
+sign <- function(num) {
+  if (num > 0) {
+    return(1)
+  } else if (num == 0) {
+    return(0)
+  } else {
+    return(-1)
+  }
+}
+
+sign(-3)
+sign(0)
+  
+  
+if (1 > 0 & -1 > 0) {
+  print ("both parts are true")
+} else {
+  print("at lest one part is not true")
+}
+
+if (1 > 0 | -1 > 0) {
+  print ("at least one part is true")
+} else {
+  print("neither part is true")
+}
+
+
+
+
+
+  
+
+  
